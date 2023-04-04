@@ -1,0 +1,24 @@
+OOP is similar to using structures the issue is that we can't declare functions inside a structure 
+that's when OOP came in.
+
+Declaration File (header file) and implementation file.
+
+if you  want to initialize params in the constructor : use the initialization list syntax
+example : 
+    test::Test(char p1, int p2, float p3) : A1(P1), a2(p2), a3(p3){
+        // CONSTRUCTOR CODE HERE
+    }
+
+CONST:
+    a part from using it to declare a const variable we can use it after the functions declarations
+    to tell the compiler that it is forbidden for the function to make anytype of assignstion meanind
+    it can't change or set any variable value.
+example :
+   //declaration     void bar(void) const;
+    //implementation void Simple::bar(void) const{
+        //code here
+    }
+
+Non member attributes and non member functions :
+    while using a non member function using the static keyword | don't use this keyword
+

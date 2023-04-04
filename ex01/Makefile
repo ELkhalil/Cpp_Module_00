@@ -6,12 +6,12 @@
 #    By: aelkhali <aelkhali@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/03/28 12:57:12 by aelkhali          #+#    #+#              #
-#    Updated: 2023/03/28 13:03:39 by aelkhali         ###   ########.fr        #
+#    Updated: 2023/04/04 15:01:27 by aelkhali         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 #Output Program Name
-NAME = 
+NAME = JunkBook
 
 # Colors :
 GREEN = \033[0;32m
@@ -21,12 +21,12 @@ BLUE = \033[0;34m
 STOP = \033[0m
 
 # Commands And Flags :
-CPP = c++ 
+CPP = c++
 FLAGS =	-Wall -Wextra -Werror -std=c++98
 RM = rm -rf
 
 # loading source files :
-SRCS = 
+SRCS = main.cpp Contact.cpp PhoneBook.cpp 
 
 all : $(NAME)
 	@echo "You Can Use $(GREEN)*** $(NAME) ***$(STOP)"
