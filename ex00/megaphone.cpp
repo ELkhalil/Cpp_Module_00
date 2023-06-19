@@ -6,7 +6,7 @@
 /*   By: aelkhali <aelkhali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/28 13:02:58 by aelkhali          #+#    #+#             */
-/*   Updated: 2023/04/04 09:20:34 by aelkhali         ###   ########.fr       */
+/*   Updated: 2023/06/11 14:55:13 by aelkhali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,6 @@ int main(int ac, char **av)
 		std::cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *" << std::endl;
 		return 0;
 	}
-
 	for (int i = 1; i < ac; ++i) {
 		for (int j = 0; j < (int)strlen(av[i]); ++j) {
 			c = av[i][j];
