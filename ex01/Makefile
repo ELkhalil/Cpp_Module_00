@@ -5,13 +5,13 @@
 #                                                     +:+ +:+         +:+      #
 #    By: aelkhali <aelkhali@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2023/03/28 12:57:12 by aelkhali          #+#    #+#              #
-#    Updated: 2023/04/04 15:01:27 by aelkhali         ###   ########.fr        #
+#    Created: 2023/07/11 14:09:32 by aelkhali          #+#    #+#              #
+#    Updated: 2023/07/11 19:00:45 by aelkhali         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 #Output Program Name
-NAME = JunkBook
+NAME = crappy_phone
 
 # Colors :
 GREEN = \033[0;32m
@@ -21,12 +21,12 @@ BLUE = \033[0;34m
 STOP = \033[0m
 
 # Commands And Flags :
-CPP = c++
+CPP = c++ 
 FLAGS =	-Wall -Wextra -Werror -std=c++98
 RM = rm -rf
 
 # loading source files :
-SRCS = main.cpp Contact.cpp PhoneBook.cpp 
+SRCS = main.cpp Contact.cpp PhoneBook.cpp
 
 all : $(NAME)
 	@echo "You Can Use $(GREEN)*** $(NAME) ***$(STOP)"

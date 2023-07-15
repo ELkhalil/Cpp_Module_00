@@ -5,13 +5,13 @@
 #                                                     +:+ +:+         +:+      #
 #    By: aelkhali <aelkhali@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2023/03/28 12:57:12 by aelkhali          #+#    #+#              #
-#    Updated: 2023/06/19 14:21:55 by aelkhali         ###   ########.fr        #
+#    Created: 2023/07/11 14:09:32 by aelkhali          #+#    #+#              #
+#    Updated: 2023/07/12 11:50:38 by aelkhali         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 #Output Program Name
-NAME = missing
+NAME = globalBanksters
 
 # Colors :
 GREEN = \033[0;32m
@@ -26,7 +26,7 @@ FLAGS =	-Wall -Wextra -Werror -std=c++98
 RM = rm -rf
 
 # loading source files :
-SRCS = tests.cpp Account.cpp
+SRCS = Account.cpp tests.cpp
 
 all : $(NAME)
 	@echo "You Can Use $(GREEN)*** $(NAME) ***$(STOP)"

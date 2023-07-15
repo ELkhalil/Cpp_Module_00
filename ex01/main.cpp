@@ -5,32 +5,39 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: aelkhali <aelkhali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/04 14:58:51 by aelkhali          #+#    #+#             */
-/*   Updated: 2023/06/19 13:12:48 by aelkhali         ###   ########.fr       */
+/*   Created: 2023/07/11 15:05:58 by aelkhali          #+#    #+#             */
+/*   Updated: 2023/07/13 11:31:17 by aelkhali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "Contact.hpp"
 #include "PhoneBook.hpp"
+#include <iostream>
 
-int main()
+int main( void )
 {
-    PhoneBook phonebook;
-
     std::string command;
+    PhoneBook phoneBook;
+
+    command = "default";
+    std::cout << "**** Welcome To The Crappy Phonebook ****" << std::endl;
     while (command != "EXIT")
     {
-        std::cout << "Enter a command (ADD, SEARCH, EXIT): ";
-        std::cin >> command;
-
+        std::cout << "Please Enter a Command: {ADD, SEARCH, EXIT} $> ";
+        if (!std::getline(std::cin, command) || std::cin.eof())
+            std::exit(1);
         if (command == "ADD")
         {
-            phonebook.add_contact();
+            phoneBook.add();
+            command = "default";
         }
         else if (command == "SEARCH")
         {
-            phonebook.display_contacts();
-            phonebook.search_contact();
+            phoneBook.search();
+            command = "default";
         }
+        else if (command == "EXIT")
+            return 0;
     }
     return 0;
 }

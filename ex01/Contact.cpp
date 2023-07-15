@@ -5,18 +5,21 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: aelkhali <aelkhali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/04 10:48:43 by aelkhali          #+#    #+#             */
-/*   Updated: 2023/06/19 13:27:13 by aelkhali         ###   ########.fr       */
+/*   Created: 2023/07/11 15:05:43 by aelkhali          #+#    #+#             */
+/*   Updated: 2023/07/13 17:23:36 by aelkhali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Contact.hpp"
 
-Contact::Contact(const std::string& first, const std::string& last, const std::string& nick, const std::string& num, const std::string& dark)
-    : first_name(first), last_name(last), nickname(nick), phone_number(num), darkest_secret(dark){};
+Contact::Contact( void ) {}
+Contact::~Contact( void ) {}
 
-std::string Contact::get_first_name() const {return first_name;};
-std::string Contact::get_last_name() const {return last_name;};
-std::string Contact::get_nickname() const {return nickname;};
-std::string Contact::get_phone_number() const {return phone_number;};
-std::string Contact::get_darkest_secret() const {return darkest_secret;};
+Contact::Contact(std::string& first, std::string& last, std::string& nick, std::string& phone, std::string& dark)
+    : _firstName(first), _lastName(last), _nickName(nick), _phoneNumber(phone), _darkestSecret(dark) {}
+
+std::string    Contact::getFirstName() const { return _firstName;};
+std::string    Contact::getLastName() const { return _lastName;};
+std::string    Contact::getNickName() const { return _nickName;};
+std::string    Contact::getPhoneNumber() const { return _phoneNumber;};
+std::string    Contact::getDarkestSecret() const { return _darkestSecret;};

@@ -5,27 +5,30 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: aelkhali <aelkhali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/28 15:55:31 by aelkhali          #+#    #+#             */
-/*   Updated: 2023/06/19 13:29:57 by aelkhali         ###   ########.fr       */
+/*   Created: 2023/07/11 15:05:09 by aelkhali          #+#    #+#             */
+/*   Updated: 2023/07/15 07:46:38 by aelkhali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PHONEBOOK_HPP
-# define PHONEBOOK_HPP
+#ifndef PhoneBook_HPP
+#define PhoneBook_HPP
 
 #include "Contact.hpp"
 #include <iostream>
-#include <iomanip>
 
 class PhoneBook {
-    private:
-        Contact contacts[8];
-    public:
-        PhoneBook(void);
-        ~PhoneBook(void);
-        void add_contact(void);
-        void display_contacts(void);
-        void search_contact(void);
+public:
+    PhoneBook( void );
+    ~PhoneBook( void );
+    void    add( void );
+    void    search( void );
+private:
+    Contact     _contacts[8];
+    int         _contact_count;
+    int         _oldest_count;
+    void        _display( void );
+    std::string _take_input(std::string msg);
+    std::string _truncate_str(std::string str);
 };
 
 #endif
